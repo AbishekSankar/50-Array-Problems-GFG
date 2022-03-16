@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-pair<long long, long long> getMinMax2(long long a[], int n) {
+pair<long long, long long> getMinMax2(const long long a[], int n) {
     pair<long long, long long> minMax;
     minMax.first = INT_MAX;
     minMax.second = INT_MIN;
