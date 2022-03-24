@@ -1,6 +1,18 @@
 #include <iostream>
 using namespace std;
 
+// Method 3 (swap the elements)
+void method3(int arr[], int n) {
+    int type0 = 0, type1 = n - 1;
+    while (type0 < type1) {
+        if (arr[type0] == 1) {
+            swap(arr[type0], arr[type1]);
+            type1--;
+        } else
+            type0++;
+    }
+}
+
 // Method 2 (Use two indexes to traverse)
 void method2(int arr[], int n) {
     int left = 0, right = n - 1;
@@ -14,7 +26,6 @@ void method2(int arr[], int n) {
 
         /* If left is smaller than right then there is a 1 at left
         and a 0 at right. Exchange arr[left] and arr[right]*/
-
         if (left < right) {
             arr[left] = 0;
             arr[right] = 1;
@@ -40,7 +51,9 @@ void method1(int a[], int n) {
 int main() {
     int x[] = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
     // method1(x, sizeof(x) / sizeof(x[0]));
-    method2(x, sizeof(x) / sizeof(x[0]));
+    // method2(x, sizeof(x) / sizeof(x[0]));
+    method3(x, sizeof(x) / sizeof(x[0]));
     for (int i : x) cout << i << " ";
+    cout << endl;
     return 0;
 }
