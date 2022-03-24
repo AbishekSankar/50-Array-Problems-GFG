@@ -7,6 +7,7 @@ using namespace std;
 
 class Solution {
 public:
+    // Builtin Sort function - log(n) complexity
     void sort012(int a[], int n) { sort(a, a + n); }
 };
 
